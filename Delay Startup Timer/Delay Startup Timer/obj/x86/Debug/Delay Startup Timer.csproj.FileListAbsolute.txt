@@ -33,3 +33,22 @@ D:\Users\bacon21\Documents\Projects SVN\Delayed Startup Timer\Delay Startup Time
 D:\Users\bacon21\Documents\Projects SVN\Delayed Startup Timer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.application
 D:\Users\bacon21\Documents\Projects SVN\Delayed Startup Timer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.exe
 D:\Users\bacon21\Documents\Projects SVN\Delayed Startup Timer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.pdb
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Delay Startup Creator.exe.config
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Timer.csproj.ResolveComReference.cache
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\DelayStartup.exe
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Delay Startup Creator.exe.manifest
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Delay Startup Creator.application
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Delay Startup Creator.exe
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Delay Startup Creator.pdb
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay_Startup_Timer.FormCreateLink.resources
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay_Startup_Timer.FormMain.resources
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay_Startup_Timer.Properties.Resources.resources
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Timer.csproj.GenerateResource.Cache
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.exe.manifest
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.application
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.exe
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.pdb
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Interop.Shell32.dll
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Interop.Shell32.dll

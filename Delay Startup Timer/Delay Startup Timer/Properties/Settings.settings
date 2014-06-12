@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Delay_Startup_Timer.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="DelayTime" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">60</Value>
+    <Setting Name="DefaultDelayTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">90</Value>
     </Setting>
   </Settings>
 </SettingsFile>
