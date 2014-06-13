@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Delay Startup Creator.exe" size="18432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Delay Startup Creator.exe" size="24064">
       <assemblyIdentity name="Delay Startup Creator" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DBQig2tZJlhd2XUoOzSjd+V4mUE=</dsig:DigestValue>
+        <dsig:DigestValue>Iexhafvyj+C6CBLfgqWLSa5JADI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3HB+BoRmt8FGLJfaPDjG9fzpntU=</dsig:DigestValue>
+        <dsig:DigestValue>UK98VdYmyfWxkcLmo6ljGUvnL8E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Qa9DFPAFyifYuGroVD7vsNZan0s=</dsig:DigestValue>
+        <dsig:DigestValue>+cSaRj0EhLgbmFSFB9vNwQfFB78=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

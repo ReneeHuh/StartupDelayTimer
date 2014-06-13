@@ -7,12 +7,15 @@ using IWshRuntimeLibrary;
 using Shell32;
 using System.Diagnostics;
 using System.IO;
+using System.Drawing;
 
 
 namespace Delay_Startup_Timer
 {
     class LinkMaster
     {
+        //http://www.codeproject.com/Articles/146757/Add-Remove-Startup-Folder-Shortcut-to-Your-App
+
         public string CreatLink(string appName, int appDelayTime, string appLocationName)
         {
             //via reg keys
@@ -46,7 +49,8 @@ namespace Delay_Startup_Timer
             myShortcut.Description = " delayed startup for " + appName;
 
             //set icon 
-            //myShortcut.IconLocation = Application.StartupPath + @"\App.ico";
+            string IconFileLocaiton = CreateIconFile(appLocationName);
+            myShortcut.IconLocation = IconFileLocaiton;
 
             //save lnk
             myShortcut.Save();
@@ -72,29 +76,125 @@ namespace Delay_Startup_Timer
                 if (folderItem != null)
                 {
                     Shell32.ShellLinkObject link = (Shell32.ShellLinkObject)folderItem.GetLink;
-                    LinkType a = new LinkType();
-                    a.Arguments = link.Arguments;
-
+                    LinkType a = new LinkType(link,fi);
                     listOfLinks.Add(a);
                 }
             }
             return listOfLinks;
 
         }
-        public void EditLink()
-        { }
-        public void DeleteLink()
+        public void EditLink(LinkType EditLink)
         {
-        
+            
+            //Delete
+            DeleteLink(EditLink);
+            //Create
+            CreatLink(ParseAppName(EditLink), ParseDelayTime(EditLink), ParseAppLocaion(EditLink));
         }
+        public void DeleteLink(LinkType DeleteMe)
+        {
+            try
+            {
+                System.IO.File.Delete(DeleteMe.LinkFullName);
+            }
+            catch
+            { }
+            
+        }
+        private string CreateIconFile(string file)
+        {
+            try
+            {
+                string appNameIcon = PraseStringLastIndexOf("\\", ".", file);
+                string iconFullName = Path.GetDirectoryName(Application.ExecutablePath) + "\\" + appNameIcon + ".ico";
+
+                Icon ico = Icon.ExtractAssociatedIcon(file);
+
+                System.IO.FileStream fs = new System.IO.FileStream(iconFullName, System.IO.FileMode.OpenOrCreate);
+                ico.Save(fs);
+                fs.Close();
+
+                return iconFullName;
+            }
+            catch
+            {
+                //do nothing
+            }
+            return "";
+        }
+
         public string GetStartupPath()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.Startup);        
         }
+        public int ParseDelayTime(LinkType Input)
+        {
+            //{ "60" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"}
+            int Start = Input.Arguments.IndexOf("\"") + 1 ;
+            int end = Input.Arguments.IndexOf("\"",Start + 1);
+            int lenght = end - Start;
+            string time = Input.Arguments.Substring(Start, lenght);
+            return Convert.ToInt32(time);
+        }
+        public string ParseAppLocaion(LinkType Input)
+        {
+            int End = Input.Arguments.LastIndexOf("\"");
+            int Start = Input.Arguments.LastIndexOf("\"", End - 1) + 1;
+            int lenght = End - Start;
+            return Input.Arguments.Substring(Start,lenght);
+        }
+        public string ParseAppName(LinkType Input)
+        {
+            int Start = Input.Arguments.LastIndexOf("\\") + 1;
+            int end = Input.Arguments.LastIndexOf(".");
+            int lenght = end - Start;
+            return Input.Arguments.Substring(Start, lenght);
+        }
+        public string PraseStringIndexOf(string StartingChar, string EndingChar, string InpurtString)
+        {
+            int start = InpurtString.IndexOf(StartingChar);
+            int end = InpurtString.IndexOf(EndingChar,start +1);
+            int lenght = end - start;
+            string r = InpurtString.Substring(start , lenght);
+            return r;
+        }
+        public string PraseStringLastIndexOf(string StartingChar, string EndingChar, string InpurtString)
+        {
+            int end = InpurtString.LastIndexOf(EndingChar);
+            int start = InpurtString.LastIndexOf(StartingChar, end -1) + 1;
+            if (start != -1 && end != -1)
+            {
+                int lenght = end - start;
+                string r = InpurtString.Substring(start, lenght);
+                return r;
+            }
+            else { return ""; }
+        }
     }
     public class LinkType
     {
+        public LinkType()
+        { }
+        public LinkType(Shell32.ShellLinkObject _Link,FileInfo _FileInfo)
+        { 
+            Link = _Link;
+            FileInfo = _FileInfo;
+            Arguments = Link.Arguments;
+            WorkingDirectory = Link.WorkingDirectory;
+            Description = Link.Description;
+            Target = Link.Target.Path;
+            LinkFullName = FileInfo.FullName;
+            //Path = Link.Path;
+        }
+        public Shell32.ShellLinkObject Link;
         public string Arguments;
+        public string WorkingDirectory;
+        public string Description;
+        public string Target;
+        public string LinkFullName;
+        public FileInfo FileInfo;
+        //public string Path;
+
         public override string ToString()
         {
             return Arguments;

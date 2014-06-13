@@ -52,3 +52,4 @@ C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay St
 C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay Startup Creator.pdb
 C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\bin\Debug\Interop.Shell32.dll
 C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Interop.Shell32.dll
+C:\Users\bacon21\Workspace\GitHub\StartupDelayTimer\Delay Startup Timer\Delay Startup Timer\obj\x86\Debug\Delay_Startup_Timer.FormEditLink.resources

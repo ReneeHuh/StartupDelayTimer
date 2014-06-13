@@ -25,10 +25,8 @@ namespace Delay_Startup_Timer
             listofLinks = myLink.LoadLinksFromStartup();
             foreach (LinkType element in listofLinks)
             {
-                listBoxMain.Items.Add(element.ToString());
+                listBoxMain.Items.Add(element);
             }
-            //http://www.codeproject.com/Articles/146757/Add-Remove-Startup-Folder-Shortcut-to-Your-App
-        
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -40,27 +38,57 @@ namespace Delay_Startup_Timer
         {
             FormCreateLink myForm = new FormCreateLink();
             myForm.ShowDialog();
+            ListBoxMainRefresh();
         }
 
         private void btEdit_Click(object sender, EventArgs e)
         {
+            if (listBoxMain.SelectedIndex != -1)
+            {
+                LinkType test = new LinkType();
+                test = (LinkType)listBoxMain.SelectedItem;
 
+                FormEditLink myEdit = new FormEditLink();
+                myEdit.Edit = test;
+                myEdit.ShowDialog();
+
+                ListBoxMainRefresh();
+            }
         }
 
         private void btTest_Click(object sender, EventArgs e)
         {
+            if (listBoxMain.SelectedIndex != -1)
+            {
+                LinkType test = new LinkType();
+                test = (LinkType)listBoxMain.SelectedItem;
+                Process.Start(test.Target,test.Arguments);
 
+            }
         }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-
+            if (listBoxMain.SelectedIndex != -1)
+            {
+                if (MessageBox.Show("Are you sure you want to delete this DelayStartup App", "Are You Sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    LinkMaster myDel = new LinkMaster();
+                    myDel.DeleteLink((LinkType)listBoxMain.SelectedItem);
+                }
+            }
+            ListBoxMainRefresh();
         }
 
         private void btOpenStartupPath_Click(object sender, EventArgs e)
         {
             LinkMaster myLink = new LinkMaster();
             Process.Start(myLink.GetStartupPath());
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

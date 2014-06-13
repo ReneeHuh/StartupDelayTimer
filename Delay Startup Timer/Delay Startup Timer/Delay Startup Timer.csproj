@@ -14,7 +14,7 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>\\SERVER\Main\MyApps\Delay Startup Timer\</PublishUrl>
+    <PublishUrl>D:\MyApps\DelayStartupTimmer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -29,9 +29,10 @@
     <PublisherName>Delay Startup Timer</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>8</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -58,7 +59,7 @@
     <StartupObject>Delay_Startup_Timer.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>F04C84527B920B5366DF52A8214A42BCA13C1327</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A54E55C735951E8E59B2C55F5BA74FAF97961C19</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Delay Startup Timer_TemporaryKey.pfx</ManifestKeyFile>
@@ -82,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEditLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditLink.Designer.cs">
+      <DependentUpon>FormEditLink.cs</DependentUpon>
+    </Compile>
     <Compile Include="LinkMaster.cs" />
     <Compile Include="FormCreateLink.cs">
       <SubType>Form</SubType>
@@ -99,6 +106,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCreateLink.resx">
       <DependentUpon>FormCreateLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditLink.resx">
+      <DependentUpon>FormEditLink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
